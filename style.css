@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --lightred: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+  --Font-size-inputs-: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-grey);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ------------------Card----------------- */
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 800px;
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border-bottom-right-radius: 30%;
+  gap: 0.5rem;
+}
+
+/* -------------------Card-Top------------------- */
+
+.card-top {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 1.5rem;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: var(--smokey-grey);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+
+input {
+  outline: none;
+  border: 1px solid var(--light-grey);
+  border-radius: 0.5rem;
+  width: 150px;
+  padding: 0.5rem 1rem;
+  color: var(--smokey-grey);
+  font-size: var(--Font-size-inputs-);
+  margin-top: 0.25rem;
+  font-weight: 700;
+}
+
+input:focus {
+  border: 2px solid var(--Purple);
+}
+
+input[type="number"] {
+  color: var(--off-black);
+}
+
+.day-error,
+.month-error,
+.year-error {
+  color: var(--lightred);
+}
+
+/* --------------------Line-------------------------- */
+.arrowline {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+}
+
+img {
+  background-color: var(--Purple);
+  padding: 1.5rem;
+  border-radius: 50%;
+  height: 85px;
+}
+
+img:hover {
+  background-color: var(--off-black);
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+  transition: 1s ease;
+}
+
+/* --------------------Card-bottom------------------------ */
+
+.card-bottom {
+  display: flex;
+  justify-content: start;
+}
+
+.dash,
+.date-value {
+  line-height: 1;
+  font-size: 100px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.dash {
+  color: var(--Purple);
+  letter-spacing: 10px;
+}
+
+/* ----------------footer---------------- */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 750px) {
+  .card {
+    width: 575px;
+    margin: auto;
+    gap: 2.5rem;
+  }
+
+  .card-top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dash,
+  .date-value {
+    font-size: 70px;
+    line-height: 1.25;
+  }
+
+  .d-none {
+    display: block;
+    transition: 1s ease;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .card {
+    width: 475px;
+    margin: auto;
+    gap: 2.5rem;
+  }
+
+  .card-top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dash,
+  .date-value {
+    font-size: 70px;
+    line-height: 1.25;
+  }
+
+  input {
+    width: 100px;
+  }
+}
