@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://tubular-entremet-21bd64.netlify.app/)
+- Solution URL: [Solution](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q/hub?share=true)
+- Live Site URL: [Live Preview](https://tubular-entremet-21bd64.netlify.app/)
 
 ## My process
 
